@@ -1,13 +1,13 @@
 <script lang="ts">
 	import {
 		AuthMenu,
+		authorizedRoleName,
 		HandleRedirectFromAuth,
 		hasAccess,
 		Header,
 		HeaderRight,
 		HeaderTitle,
 		LoginForm,
-		authorizedRoleName,
 		Theme
 	} from '@ldn-viz/ui';
 
@@ -39,9 +39,16 @@
 		</HeaderRight>
 	</Header>
 
-	{#if $hasAccess}
+	{#if $hasAccess || import.meta.env.DEV}
 		<slot />
 	{:else}
 		<LoginForm config={oauth_config} />
 	{/if}
+
+	<!-- Original code bypassing for now. -->
+	<!-- {#if $hasAccess}
+		<slot />
+	{:else}
+		<LoginForm config={oauth_config} />
+	{/if} -->
 </div>
