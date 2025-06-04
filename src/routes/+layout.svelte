@@ -39,16 +39,9 @@
 		</HeaderRight>
 	</Header>
 
-	{#if $hasAccess || import.meta.env.DEV}
+	{#if $hasAccess}
 		<slot />
 	{:else}
 		<LoginForm config={oauth_config} />
 	{/if}
-
-	<!-- Original code bypassing for now. -->
-	<!-- {#if $hasAccess}
-		<slot />
-	{:else}
-		<LoginForm config={oauth_config} />
-	{/if} -->
 </div>

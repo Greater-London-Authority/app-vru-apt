@@ -3,7 +3,8 @@
 
 	import { Button, fetchWithAuth } from '@ldn-viz/ui';
 
-	const url = 'https://api2.ldn-gis.co.uk/tables/auth-test/forecast_ward?limit=5';
+	const url =
+		'https://api2.ldn-gis.co.uk/vru/monthly_mps_othercrime?limit=5&Area%20Code=eq.E09000002';
 
 	let pageData: any[];
 	fetchWithAuth(url, {})
