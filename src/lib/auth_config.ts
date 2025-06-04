@@ -3,7 +3,7 @@ import { PUBLIC_POST_LOGIN_URI, PUBLIC_REDIRECT_URI } from '$env/static/public';
 // const PUBLIC_REDIRECT_URI = "";
 
 export const oauth_config = {
-	app_name: 'LDN Viz starter template',
+	app_name: 'VRU Area Prioritisation Tool',
 	client_id: 'vis-apps',
 	redirect_uri: PUBLIC_REDIRECT_URI || 'http://localhost:5173/',
 	authorization_endpoint:
