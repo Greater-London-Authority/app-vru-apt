@@ -6,6 +6,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_REDIRECT_URI: https://dev.ldn-gis.co.uk/vru-apt/
+      PUBLIC_POST_LOGIN_URI: https://dev.ldn-gis.co.uk/vru-apt
+      
     steps:
       - uses: actions/checkout@v4
 
