@@ -5,9 +5,11 @@
 		HandleRedirectFromAuth,
 		hasAccess,
 		Header,
+		HeaderItem,
 		HeaderRight,
 		HeaderTitle,
 		LoginForm,
+		NavLink,
 		Theme
 	} from '@ldn-viz/ui';
 
@@ -15,6 +17,7 @@
 	$authorizedRoleName = oauth_config.role_name;
 
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 	import '../app.postcss';
 </script>
 
@@ -32,7 +35,15 @@
 
 <div class="min-h-screen flex flex-col">
 	<Header>
-		<HeaderTitle {base}>LDN Viz tools starter template</HeaderTitle>
+		<HeaderTitle {base}>VRU APT</HeaderTitle>
+
+		<HeaderItem>
+			<nav class="flex space-x-6">
+				<NavLink target="">Home</NavLink>
+				<NavLink target="overview">Overview</NavLink>
+				<NavLink target="wards">Ward Profiles</NavLink>
+			</nav>
+		</HeaderItem>
 
 		<HeaderRight>
 			<AuthMenu config={oauth_config} />
